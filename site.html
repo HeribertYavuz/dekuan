@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dekuan Linux — Minimal. Transparent. Plus Ultra.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-900 text-slate-100 antialiased">
+  <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="assets/mascot.png" alt="Dekuan mascot" class="w-12 h-12 rounded-md shadow-lg" />
+      <div>
+        <h1 class="text-2xl font-extrabold tracking-tight" id="site-title">Dekuan Linux</h1>
+        <p class="text-xs text-slate-400 -mt-0.5" id="site-sub">Debian + debootstrap · OpenRC · Minimal & Indie</p>
+      </div>
+    </div>
+    <nav class="space-x-4 hidden md:block">
+      <a href="#features" class="text-slate-300 hover:text-white" id="nav-features">Features</a>
+      <a href="#download" class="text-slate-300 hover:text-white" id="nav-download">Download</a>
+      <a href="#docs" class="text-slate-300 hover:text-white" id="nav-docs">Docs</a>
+      <a href="#join" class="text-slate-300 hover:text-white" id="nav-join">Get Involved</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="lang-toggle" class="text-sm border border-slate-600 px-3 py-1 rounded hover:bg-slate-800">🇬🇧 English</button>
+      <a href="#download" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-neutral-900 px-4 py-2 rounded-lg font-semibold" id="btn-download">Download</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
+    <section class="flex-1">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight" id="hero-title">
+        Dekuan Linux — Minimal. Transparent. Plus Ultra.
+      </h2>
+      <p class="mt-4 text-slate-300 max-w-xl" id="hero-desc">
+        Built from a <code>debootstrap</code> base and powered by <strong>OpenRC</strong>, Dekuan brings a lightweight, auditable Linux experience that honors UNIX simplicity and the freedom of open source.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#download" class="bg-amber-400 hover:bg-amber-500 text-neutral-900 px-4 py-2 rounded-md font-semibold" id="hero-getiso">Get ISO</a>
+        <a href="#docs" class="border border-slate-700 hover:border-slate-500 px-4 py-2 rounded-md" id="hero-read">Read Docs</a>
+        <a href="https://github.com/your-repo" class="px-4 py-2 rounded-md bg-slate-800 hover:bg-slate-700" id="hero-source">Source</a>
+      </div>
+    </section>
+    <aside class="w-full md:w-1/3 flex justify-center">
+      <div class="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
+        <img src="assets/wallpaper-1080p.png" alt="Dekuan wallpaper" class="object-cover w-full h-full opacity-90" />
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img src="assets/mascot.png" alt="Deky mascot" class="w-48 h-48 drop-shadow-2xl" />
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold" id="features-title">What makes Dekuan special?</h3>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-slate-800 rounded-lg">
+        <h4 class="font-semibold" id="feat1-title">Transparent init</h4>
+        <p class="text-slate-400 mt-2 text-sm" id="feat1-desc">OpenRC service scripts you can read and modify. No magical black boxes.</p>
+      </div>
+      <div class="p-6 bg-slate-800 rounded-lg">
+        <h4 class="font-semibold" id="feat2-title">Debian base</h4>
+        <p class="text-slate-400 mt-2 text-sm" id="feat2-desc">Leverage Debian's package ecosystem and security while staying lightweight.</p>
+      </div>
+      <div class="p-6 bg-slate-800 rounded-lg">
+        <h4 class="font-semibold" id="feat3-title">Community-first</h4>
+        <p class="text-slate-400 mt-2 text-sm" id="feat3-desc">Open development guidelines, clear contributing docs, and friendly maintainers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="bg-slate-850 p-8 rounded-lg border border-slate-800">
+      <h3 class="text-xl font-bold" id="dl-title">Download</h3>
+      <p class="text-slate-400 mt-2" id="dl-desc">Choose your image. Signed releases will be posted on GitHub Releases.</p>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="p-4 bg-slate-800 rounded-lg flex flex-col gap-3">
+          <strong id="dl1-title">Legacy ISO</strong>
+          <span class="text-sm text-slate-400" id="dl1-desc">BIOS + UEFI hybrid</span>
+          <a class="mt-2 inline-block text-sm bg-amber-400 px-3 py-2 rounded" id="dl1-btn">Download</a>
+        </div>
+        <div class="p-4 bg-slate-800 rounded-lg flex flex-col gap-3">
+          <strong id="dl2-title">Chroot+İnstall</strong>
+          <span class="text-sm text-slate-400" id="dl2-desc">Headless & container-friendly</span>
+          <a class="mt-2 inline-block text-sm bg-amber-400 px-3 py-2 rounded" id="dl2-btn">Download</a>
+        </div>
+        <div class="p-4 bg-slate-800 rounded-lg flex flex-col gap-3">
+          <strong id="dl3-title">Wallpaper 1080p</strong>
+          <span class="text-sm text-slate-400" id="dl3-desc">Deky full-res wallpaper</span>
+          <a href="assets/wallpaper-1080p.png" download class="mt-2 inline-block text-sm bg-amber-400 px-3 py-2 rounded" id="dl3-btn">Download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="docs" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold" id="docs-title">Docs</h3>
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 bg-slate-800 rounded-lg">
+        <h4 class="font-semibold" id="docs1-title">Install guide</h4>
+        <ol class="list-decimal list-inside text-slate-400 mt-2 text-sm" id="docs1-list">
+          <li>Download the image and verify the signature.</li>
+          <li>Write the image to a USB with dd or balenaEtcher.</li>
+          <li>Boot, choose Dekuan installer, partition and install.</li>
+          <li>Enable OpenRC services and reboot.</li>
+        </ol>
+      </div>
+      <div class="p-6 bg-slate-800 rounded-lg">
+        <h4 class="font-semibold" id="docs2-title">Contributing</h4>
+        <p class="text-slate-400 text-sm mt-2" id="docs2-desc">Fork the repo, open issues for bugs, and send PRs for packaging, themes, and docs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold" id="join-title">Get involved</h3>
+    <p class="text-slate-400 mt-2" id="join-desc">Join our chat, report bugs, or help maintain packages. Community-first governance.</p>
+    <div class="mt-6 flex gap-3">
+      <a href="https://github.com/your-repo" class="px-4 py-2 bg-slate-800 rounded">GitHub</a>
+      <a href="https://matrix.to/#/#dekuan:matrix.org" class="px-4 py-2 bg-slate-800 rounded">Matrix</a>
+      <a href="mailto:contact@dekuan.org" class="px-4 py-2 bg-slate-800 rounded">Contact</a>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-400 text-sm" id="footer-text">© 2025 Dekuan Project — Built with ❤️ and terminal power.</p>
+      <div class="flex items-center gap-3">
+        <a href="#">Privacy</a>
+        <a href="#">License</a>
+        <a href="#">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById("lang-toggle");
+    let lang = "en";
+
+    const text = {
+      en: {
+        langBtn: "🇹🇷 Türkçe",
+        heroTitle: "Dekuan Linux — Minimal. Transparent. Plus Ultra.",
+        heroDesc: "Built from a debootstrap base and powered by OpenRC, Dekuan brings a lightweight, auditable Linux experience that honors UNIX simplicity and open source freedom.",
+        featuresTitle: "What makes Dekuan special?",
+        feat1Title: "Transparent init",
+        feat1Desc: "OpenRC service scripts you can read and modify. No magical black boxes.",
+        feat2Title: "Debian base",
+        feat2Desc: "Leverage Debian's package ecosystem and security while staying lightweight.",
+        feat3Title: "Community-first",
+        feat3Desc: "Open development guidelines, clear contributing docs, and friendly maintainers.",
+        dlTitle: "Download",
+        dlDesc: "Choose your image. Signed releases will be posted on GitHub Releases.",
+        docsTitle: "Docs",
+        docs1Title: "Install guide",
+        docs2Title: "Contributing",
+        joinTitle: "Get involved",
+        joinDesc: "Join our chat, report bugs, or help maintain packages. Community-first governance.",
+        footerText: "© 2025 Dekuan Project — Built with ❤️ and terminal power."
+      },
+      tr: {
+        langBtn: "🇬🇧 English",
+        heroTitle: "Dekuan Linux — Minimal. Şeffaf. Plus Ultra.",
+        heroDesc: "debootstrap tabanlı ve OpenRC ile güçlendirilmiş, hafif, denetlenebilir ve özgürlük odaklı bir Linux deneyimi sunar.",
+        featuresTitle: "Dekuan'ı özel kılan nedir?",
+        feat1Title: "Şeffaf init sistemi",
+        feat1Desc: "Okuyup düzenleyebileceğiniz OpenRC servis betikleri. Kapalı kutular yok.",
+        feat2Title: "Debian temeli",
+        feat2Desc: "Debian paket ekosisteminin gücünü kullanırken hafif kalır.",
+        feat3Title: "Topluluk öncelikli",
+        feat3Desc: "Açık geliştirme yönergeleri, anlaşılır katkı dökümanları ve dostça geliştiriciler.",
+        dlTitle: "İndir",
+        dlDesc: "Görüntü türünü seçin. İmzalı sürümler GitHub Releases üzerinde paylaşılacaktır.",
+        docsTitle: "Belgeler",
+        docs1Title: "Kurulum rehberi",
+        docs2Title: "Katkıda bulunma",
+        joinTitle: "Katıl",
+        joinDesc: "Sohbetimize katılın, hataları bildirin veya paketlere katkıda bulunun. Topluluk odaklı yönetim.",
+        footerText: "© 2025 Dekuan Projesi — ❤️ ve terminal gücüyle oluşturuldu."
+      }
+    };
+
+    langToggle.addEventListener("click", () => {
+      lang = lang === "en" ? "tr" : "en";
+      const t = text[lang];
+      langToggle.textContent = t.langBtn;
+      document.getElementById("hero-title").textContent = t.heroTitle;
+      document.getElementById("hero-desc").textContent = t.heroDesc;
+      document.getElementById("features-title").textContent = t.featuresTitle;
+      document.getElementById("feat1-title").textContent = t.feat1Title;
+      document.getElementById("feat1-desc").textContent = t.feat1Desc;
+      document.getElementById("feat2-title").textContent = t.feat2Title;
+      document.getElementById("feat2-desc").textContent = t.feat2Desc;
+      document.getElementById("feat3-title").textContent = t.feat3Title;
+      document.getElementById("feat3-desc").textContent = t.feat3Desc;
+      document.getElementById("dl-title").textContent = t.dlTitle;
+      document.getElementById("dl-desc").textContent = t.dlDesc;
+      document.getElementById("docs-title").textContent = t.docsTitle;
+      document.getElementById("docs1-title").textContent = t.docs1Title;
+      document.getElementById("docs2-title").textContent = t.docs2Title;
+      document.getElementById("join-title").textContent = t.joinTitle;
+      document.getElementById("join-desc").textContent = t.joinDesc;
+      document.getElementById("footer-text").textContent = t.footerText;
+    });
+  </script>
+</body>
+</html>
